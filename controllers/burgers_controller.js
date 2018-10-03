@@ -13,15 +13,16 @@ router.get('/', function (req, res) {
     });
 });
 
-router.get('/create', function (req, res) {
-    burger.create('Veggie Burger', function (data) {
-        res.redirect('/');
+router.post('/api/burgers', function (req, res) {
+    console.log(req.body);
+    burger.create(req.body.name, function (data) {
+        res.status(200).end();
     });
 });
 
-router.get('/update', function (req, res) {
-    burger.update(6, 'Quarter Pounder', 1, function (data) {
-        res.redirect('/');
+router.put('/api/burgers/:id', function (req, res) {
+    burger.update(req.params.id, function (data) {
+        res.status(200).end();
     });
 });
 

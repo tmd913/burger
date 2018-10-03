@@ -11,8 +11,8 @@ module.exports = {
             cb(res);
         });
     },
-    update: function (id, burger_name, devoured, cb) {
-        orm.updateOne(id, burger_name, devoured, function (res) {
+    update: function (id, cb) {
+        orm.updateOne(id, function (res) {
             cb(res);
         });
     }

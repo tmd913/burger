@@ -1,12 +1,50 @@
 <h1>Burger List</h1>
 
-<ul>
-  {{#each burgers}}
-  <li>
-    <p>
-      {{this.id}}. {{this.burger_name}}
-      {{!-- <button data-burgerid="{{this.id}}" class="delmovie">Delete Movie</button> --}}
-    </p>
-  </li>
-  {{/each}}
+<h2>Burgers</h2>
+
+<ul class="burger-ul">
+    {{#each burgers}} 
+        {{#unless this.devoured}}
+            <li class="burger-li">
+                <p class="burger-p">
+                {{this.id}}. {{this.burger_name}}
+                </p>
+                <button data-burgerid="{{this.id}}" class="devour">Devour</button>
+            </li>
+        {{/unless}}
+    {{/each}}
 </ul>
+
+<h2>Eaten</h2>
+
+<ul class="eaten-ul">
+    {{#each burgers}} 
+        {{#if this.devoured}}
+            <li class="eaten-li">
+                <p class="eaten-p">
+                {{this.id}}. {{this.burger_name}}
+                </p>
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+    <div class="form-group">
+        <label for="burger-name">Burger Name:</label>
+        <input type="text" id="burger-input" name="burger-name">
+    </div>
+
+    {{!--
+    <div class="form-group">
+        <label for="slee">Sleepy?</label>
+        <br>
+        <input type="radio" name="sleepy" value="1" checked> Sleepy!
+        <br>
+        <input type="radio" name="sleepy" value="0"> Awake
+    </div> --}}
+
+    <button type="submit">Add</button>
+</form>

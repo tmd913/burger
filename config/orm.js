@@ -33,10 +33,10 @@ function insertOne(burger_name, cb) {
     );
 }
 
-function updateOne(id, burger_name, devoured, cb) {
+function updateOne(id, cb) {
     connection.query(
-        `UPDATE burgers SET burger_name = ?, devoured = ? WHERE id = ?`,
-        [burger_name, devoured, id],
+        `UPDATE burgers SET devoured = 1 WHERE id = ?`,
+        [id],
         function (err, data) {
             if (err) { return res.status(500).end(); }
 
