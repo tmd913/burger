@@ -27,7 +27,6 @@ function insertOne(burger_name, cb) {
         function (err, data) {
             if (err) { return res.status(500).end(); }
 
-            console.log('Adding burger...');
             cb(data);
         }
     );
@@ -40,7 +39,6 @@ function updateOne(id, cb) {
         function (err, data) {
             if (err) { return res.status(500).end(); }
 
-            console.log(`Updating burger with id = ${id}`);
             cb(data);
         }
 
@@ -54,7 +52,6 @@ function deleteOne(id, cb) {
         function (err, data) {
             if (err) { return res.status(500).end(); }
 
-            console.log(`Deleting burger with id = ${id}`);
             cb(data);
         }
 

@@ -8,13 +8,11 @@ router.get('/', function (req, res) {
         const hbsObj = {
             burgers: data
         };
-        console.log(hbsObj);
         res.render('index', hbsObj);
     });
 });
 
 router.post('/api/burgers', function (req, res) {
-    console.log(req.body);
     burger.create(req.body.name, function (data) {
         res.status(200).end();
     });

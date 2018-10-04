@@ -11,8 +11,6 @@
             <ul class="burger-ul">
                 {{#each burgers}} {{#unless this.devoured}}
                 <li class="burger-li">
-                    {{!--
-                    <button data-burgerid="{{this.id}}" class="devour">Devour</button> --}}
                     <a class="devour waves-effect waves-light btn-small" data-burgerid="{{this.id}}">Devour</a>
                     <p class="burger-p">
                         {{this.id}}. {{this.burger_name}}
@@ -49,15 +47,6 @@
                 <label for="burger-name">Burger Name:</label>
                 <input type="text" id="burger-input" name="burger-name" placeholder="Krabby Patty">
             </div>
-
-            {{!--
-            <div class="form-group">
-                <label for="slee">Sleepy?</label>
-                <br>
-                <input type="radio" name="sleepy" value="1" checked> Sleepy!
-                <br>
-                <input type="radio" name="sleepy" value="0"> Awake
-            </div> --}}
 
             <button id="add" type="submit">
                 <a id="add-a" class="waves-effect waves-light btn">Add</a>
