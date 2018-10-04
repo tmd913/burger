@@ -8,7 +8,7 @@ This app allows the user to add, update, and delete burgers from a MySQL databas
 
 Enter a name for the burger you wish to add and click the `ADD` button, which will add to the database and display the burger in the _Burgers to Eat_ section.
 
-## Read 
+### Read 
 
 When the page is loaded, the database information is displayed to the user.
 
