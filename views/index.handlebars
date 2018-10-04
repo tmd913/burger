@@ -1,50 +1,68 @@
-<h1>Burger List</h1>
+<div class="container">
 
-<h2>Burgers</h2>
+    <h1 class="center-align">Eat-Da-Burger</h1>
+    <img id="patrick" src="https://media.giphy.com/media/IgOEWPOgK6uVa/giphy.gif" alt="Devouring Burgers">
 
-<ul class="burger-ul">
-    {{#each burgers}} 
-        {{#unless this.devoured}}
-            <li class="burger-li">
-                <p class="burger-p">
-                {{this.id}}. {{this.burger_name}}
-                </p>
-                <button data-burgerid="{{this.id}}" class="devour">Devour</button>
-            </li>
-        {{/unless}}
-    {{/each}}
-</ul>
+    <div class="row">
+        <div class="col s6">
+            <h2 class="center-align">Burgers to Eat</h2>
+            <hr>
 
-<h2>Eaten</h2>
+            <ul class="burger-ul">
+                {{#each burgers}} {{#unless this.devoured}}
+                <li class="burger-li">
+                    {{!--
+                    <button data-burgerid="{{this.id}}" class="devour">Devour</button> --}}
+                    <a class="devour waves-effect waves-light btn-small" data-burgerid="{{this.id}}">Devour</a>
+                    <p class="burger-p">
+                        {{this.id}}. {{this.burger_name}}
+                    </p>
+                </li>
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
 
-<ul class="eaten-ul">
-    {{#each burgers}} 
-        {{#if this.devoured}}
-            <li class="eaten-li">
-                <p class="eaten-p">
-                {{this.id}}. {{this.burger_name}}
-                </p>
-            </li>
-        {{/if}}
-    {{/each}}
-</ul>
+        <div class="col s6">
+            <h2 class="center-align">Devoured Burgers</h2>
+            <hr>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+            <ul class="eaten-ul">
+                {{#each burgers}} {{#if this.devoured}}
+                <li class="eaten-li">
+                    <a class="delete waves-effect waves-light btn-small" data-burgerid="{{this.id}}">Garbage</a>
+                    <p class="eaten-p">
+                        {{this.id}}. {{this.burger_name}}
+                    </p>
+                </li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
 
-    <div class="form-group">
-        <label for="burger-name">Burger Name:</label>
-        <input type="text" id="burger-input" name="burger-name">
     </div>
 
-    {{!--
-    <div class="form-group">
-        <label for="slee">Sleepy?</label>
-        <br>
-        <input type="radio" name="sleepy" value="1" checked> Sleepy!
-        <br>
-        <input type="radio" name="sleepy" value="0"> Awake
-    </div> --}}
+    <div class="container container-add">
+        <h2 class="center-align">Add a Burger</h2>
+        <hr>
+        <form class="create-form">
 
-    <button type="submit">Add</button>
-</form>
+            <div>
+                <label for="burger-name">Burger Name:</label>
+                <input type="text" id="burger-input" name="burger-name" placeholder="Krabby Patty">
+            </div>
+
+            {{!--
+            <div class="form-group">
+                <label for="slee">Sleepy?</label>
+                <br>
+                <input type="radio" name="sleepy" value="1" checked> Sleepy!
+                <br>
+                <input type="radio" name="sleepy" value="0"> Awake
+            </div> --}}
+
+            <button id="add" type="submit">
+                <a id="add-a" class="waves-effect waves-light btn">Add</a>
+            </button>
+        </form>
+    </div>
+
+</div>

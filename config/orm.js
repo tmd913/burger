@@ -47,8 +47,23 @@ function updateOne(id, cb) {
     );
 }
 
+function deleteOne(id, cb) {
+    connection.query(
+        `DELETE FROM burgers WHERE id = ?`,
+        [id],
+        function (err, data) {
+            if (err) { return res.status(500).end(); }
+
+            console.log(`Deleting burger with id = ${id}`);
+            cb(data);
+        }
+
+    );
+}
+
 module.exports = {
     selectAll: selectAll,
     insertOne: insertOne,
-    updateOne: updateOne
+    updateOne: updateOne,
+    deleteOne: deleteOne
 };

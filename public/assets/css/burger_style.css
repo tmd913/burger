@@ -1,4 +1,90 @@
-.burger-p {
-    width: 300px;
+body {
+    background-color: rgb(255, 169, 169);
+    font-size: 18px;
+    font-family: 'K2D', sans-serif;
+}
+
+.container {
+    width: 90%;
+}
+
+.container-add {
+    width: 60%;
+}
+
+h1 {
+    font-size: 44px!important;
+    margin: 10px 0!important;
+}
+
+h2 {
+    margin: 0!important;
+    margin-bottom: 10px!important;
+    font-size: 36px!important;
+}
+
+.burger-p, .eaten-p {
     display: inline-block;
+    margin: 5px;
+}
+
+.burger-li, .eaten-li {
+    margin: 5px;
+}
+
+.burger-ul, .eaten-ul {
+    margin: 0;
+}
+
+.devour {
+    margin-right: 5px;
+}
+
+#add {
+    outline: none;
+    background-color: rgb(255, 169, 169);
+    border: none;
+    width: 100%;
+    padding: 0;
+}
+
+#add-a {
+    width: 100%;
+}
+
+label {
+    font-size: 16px!important;
+    color: black!important;
+}
+
+#burger-input {
+    background-color: #fff;
+    padding: 0 5px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'K2D', sans-serif;
+}
+
+#burger-input::placeholder {
+    color: rgb(117, 117, 117);
+}
+
+#patrick {
+    width: 300px;
+    height: 150px;
+    display: block;
+    margin: 10px auto;
+}
+
+hr {
+    border-style: solid;
+}
+
+.row {
+    margin-bottom: 0!important;
+}
+
+a {
+    font-family: 'K2D', sans-serif;
 }

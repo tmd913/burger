@@ -15,5 +15,10 @@ module.exports = {
         orm.updateOne(id, function (res) {
             cb(res);
         });
+    },
+    delete: function (id, cb) {
+        orm.deleteOne(id, function (res) {
+            cb(res);
+        });
     }
 }
