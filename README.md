@@ -6,12 +6,12 @@ This app allows the user to add, update, and delete burgers from a MySQL databas
 
 ### Add
 
-Enter a name for the burger you wish to add and click the `Add` button.
+Enter a name for the burger you wish to add and click the `ADD` button, which will add to the database and display the burger in the _Burgers to Eat_ section.
 
 ### Update
 
-Click the `Devour` button next to the burger you wish to eat, which will update the database and move the burger to the `Devoured Burgers` section.
+Click the `DEVOUR` button next to the burger you wish to eat, which will update the database and move the burger to the _Devoured Burgers_ section.
 
 ### Delete
 
-Click the `Garbage` button next to the burger you wish to remove, which will delete from the database and remove the burger from the page.
+Click the `GARBAGE` button next to the burger you wish to remove, which will delete from the database and remove the burger from the page.
