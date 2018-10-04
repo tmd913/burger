@@ -16,6 +16,6 @@ app.set('view engine', 'handlebars');
 
 app.use(controller);
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
     console.log('Server listening on: http://localhost:' + PORT);
-  });
+});
