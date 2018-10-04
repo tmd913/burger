@@ -2,7 +2,7 @@
 
 ## Overview
 
-This app allows the user to add, update, and delete burgers from a MySQL database using a front-end interface. Whenever the state of the database is changed, the page displays that new information to the user. In addition to MySQL, this app uses Handlebars for templating and Express for the server.
+This app allows the user to add, update, and delete burgers from a MySQL database using a front-end interface. Whenever the state of the database is changed, the page displays that new information to the user. In addition to MySQL, this app also uses Handlebars for the templating, Express for the server, and the MVC design pattern for the file structure.
 
 ### Create
 
