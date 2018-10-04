@@ -2,6 +2,7 @@ const mysql = require('mysql');
 
 let connection;
 
+// use jawsdb for database when deployed to heroku
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {

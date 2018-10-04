@@ -1,4 +1,5 @@
 $(function () {
+    // add burger click listener
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
 
@@ -16,6 +17,7 @@ $(function () {
         );
     });
 
+    // devour burger click listen
     $(".devour").on("click", function (event) {
         var id = $(this).data("burgerid");
 
@@ -28,6 +30,7 @@ $(function () {
         );
     });
 
+    // put in garbage click listener
     $(".delete").on("click", function (event) {
         var id = $(this).data("burgerid");
 
